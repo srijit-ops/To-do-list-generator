@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+body{
+    background: #36454F;
+}
+h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 35px;
+    color: #A9A9A9;
+    opacity: 0.5;
+    margin: 30px 20px;
+    text-transform: uppercase;
+}
+.task_add{
+    background: transparent;
+    border: none;
+}
+.add_part{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px 100px;
+}
+.add_part input{
+    width: 1000px;
+    font-size: 15px;
+    padding: 15px;
+    border: none;
+    background: #28282B;
+    color: white;
+    border-radius: 6px;
+    outline: 0;
+}
+.task_add h2{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFC300;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.task_heading{
+    font-size: 33px;
+    color: #A9A9A9;
+    opacity: 0.5;
+    font-weight: 500;
+    margin: 15px 50px;
+}
+/*.data, .checkButton, .delButton, .liDiv*/
+
+.task_container{
+    margin: 20px 140px;
+    padding: 15px;
+    list-style: none;
+}
+.liDiv{
+    background-color: #28282B;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 7px;
+}
+.data{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin-right: 550px;
+}
+.checkButton{
+    background-color: transparent;
+    color: #FFC300;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.delButton{
+    background-color: transparent;
+    color: #FFC300;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.task_done{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.selection_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selection{
+    margin: 25px;
+    padding: 13px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #28282b;
+    color: #ffc300;
+    outline: 0;
+    margin-bottom: 50px;
+}
+
+@media(max-width:1330px){
+    .add_part input{
+        width: 860px;
+    }
+}
+@media(max-width:1200px){
+    .add_part input{
+        width: 700px;
+    }
+    .task_add h2 {
+        font-size: 18px;
+    }
+    .task_container {
+        margin: 20px 125px;
+    }
+}
+@media(max-width:1024px){
+    .task_container {
+        margin: 20px 40px;
+    }
+    .data{
+        margin-right: 300px;
+    }
+    .add_part input {
+        width: 600px;
+    }
+}
+@media(max-width:970px){
+    .add_part input {
+        width: 450px;
+    }
+}
+@media(max-width:769px){
+    .add_part{
+        margin: 50px;
+        flex-wrap: wrap;
+    }
+    .add_part input{
+    width: 370px;
+    margin-bottom: 20px;
+    }
+    .data {
+        margin-right: 150px;
+        font-size: 16px;
+    }
+    
+    
+}
+
+@media(max-width:481px){
+    h1{
+        font-size: 28px;
+    }
+    .add_part {
+        margin: 50px 30px;
+        flex-wrap: wrap;
+    }
+    .add_part input {
+        width: 260px;
+    }
+    .task_add{
+        width: 100%;
+    }
+    .task_add h2 {
+        font-size: 16px;
+    }
+    .selection{
+        font-size: 15px;
+    }
+    .task_heading {
+        font-size: 25px;
+        margin: 15px 30px;
+    }
+    .task_container {
+        margin: 20px 15px;
+    }
+    .data {
+        margin-right: 100px;
+        font-size: 15px;
+    }
+    .checkButton{
+        font-size: 15px;
+    }
+    .delButton{
+        font-size: 15px;
+    }
+}
