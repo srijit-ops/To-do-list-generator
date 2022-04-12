@@ -11,9 +11,9 @@ task_list[0].addEventListener("click", doneDel)
 filterOption[0].addEventListener("click", filter_todo)
 
 //input adding function
-function addData(click) {
+function addData(event) {
   //prevent form submitting
-  click.preventDefault()
+  event.preventDefault()
 
   if (input[0].value) {    
     const li_container = document.createElement("div") //create list container which will contain li and 2 buttons.
