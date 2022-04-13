@@ -52,7 +52,7 @@ h1{
     font-weight: 500;
     margin: 15px 50px;
 }
-/*.data, .checkButton, .delButton, .liDiv*/
+
 
 .task_container{
     margin: 20px 140px;
@@ -74,7 +74,7 @@ h1{
     font-weight: 500;
     margin-right: 550px;
 }
-.checkButton{
+.checkButton, .delButton, .editButton{
     background-color: transparent;
     color: #FFC300;
     font-size: 17px;
@@ -82,17 +82,22 @@ h1{
     border: none;
     cursor: pointer;
 }
-.delButton{
-    background-color: transparent;
-    color: #FFC300;
-    font-size: 17px;
+
+.liInputCSS{
+    font-size: 18px;
+    color: white;
     font-weight: 500;
+    outline: none;
+    background: transparent;
     border: none;
-    cursor: pointer;
 }
 .task_done{
     text-decoration: line-through;
     opacity: 0.5;
+}
+.doneInput{
+    text-decoration: line-through;
+    text-decoration-color: black;
 }
 .selection_holder{
     display: flex;
@@ -115,6 +120,9 @@ h1{
     .add_part input{
         width: 860px;
     }
+    .data{
+        margin-right: 470px;
+    }
 }
 @media(max-width:1200px){
     .add_part input{
@@ -125,6 +133,9 @@ h1{
     }
     .task_container {
         margin: 20px 125px;
+    }
+    .data{
+        margin-right: 310px;
     }
 }
 @media(max-width:1024px){
@@ -142,6 +153,9 @@ h1{
     .add_part input {
         width: 450px;
     }
+    .data {
+        margin-right: 220px;
+    }
 }
 @media(max-width:769px){
     .add_part{
@@ -153,10 +167,13 @@ h1{
     margin-bottom: 20px;
     }
     .data {
-        margin-right: 150px;
+        margin-right: 0px;
         font-size: 16px;
     }
-    
+    .liInputCSS {
+        font-size: 16px;
+    }
+
     
 }
 
@@ -188,13 +205,14 @@ h1{
         margin: 20px 15px;
     }
     .data {
-        margin-right: 100px;
+        margin-right: 0px;
         font-size: 15px;
     }
-    .checkButton{
+    .liInputCSS{
+        width: 100px;
+    }
+    .checkButton, .editButton, .delButton{
         font-size: 15px;
     }
-    .delButton{
-        font-size: 15px;
-    }
+    
 }

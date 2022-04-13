@@ -7,7 +7,7 @@ const filterOption = document.querySelectorAll(".selection")
 //click event adding
 
 add_button[0].addEventListener("click", addData)
-task_list[0].addEventListener("click", doneDel)
+task_list[0].addEventListener("click", doneDelEdit)
 filterOption[0].addEventListener("click", filter_todo)
 
 //input adding function
@@ -23,8 +23,22 @@ function addData(event) {
     //create li
     const listItem = document.createElement("li")
     listItem.classList.add("data")
-    listItem.innerText = input[0].value
+    /*listItem.innerText = input[0].value*/
     li_container.appendChild(listItem) //add the li in list container div
+    
+    //create input in li
+    var liInput=document.createElement("input")
+    liInput.classList.add("liInputCSS")
+    liInput.value=input[0].value
+    liInput.type="text"
+    liInput.setAttribute("readonly","readonly")
+    listItem.appendChild(liInput)
+
+    //create edit button
+    const edit=document.createElement("button")
+    edit.classList.add("editButton")
+    edit.innerText="Edit"
+    li_container.appendChild(edit) //add the edit button in list container div
 
     //create done button
     const done = document.createElement("button")
@@ -40,17 +54,15 @@ function addData(event) {
 
     task_list[0].appendChild(li_container)//add the whole list container div in the ul div
 
-
-
     input[0].value = "" //To clear the input box after every time we add the input
   } else {
     alert("Please enter the task.")
   }
 }
 
-//complete and uncomplete buttons
+//edit, complete and uncomplete buttons
 
-function doneDel(event) {
+function doneDelEdit(event) {
   const targetbyClick = event.target
 
   //delete item
@@ -59,13 +71,32 @@ function doneDel(event) {
     del_Div.remove()
   } else if (targetbyClick.classList[0] === "checkButton") { //completed item
     const checked_div = targetbyClick.parentElement
-    //console.log(checked_div)
+    const targetLi3=(targetbyClick.previousElementSibling).previousElementSibling //targeting li
+    const targetInput3= targetLi3.firstChild //targeting input inside li for line through
+    
     checked_div.classList.toggle("task_done")
+    targetInput3.classList.toggle("doneInput")
 
     targetbyClick.disabled = true //disable the done button after clicking the done button.
+    targetbyClick.previousElementSibling.disabled=true //disable the edit button after marking the task done!
+    
+  }else if(targetbyClick.classList[0]==="editButton"){ //edit the item
+    if(targetbyClick.innerText==="Edit"){
+      targetbyClick.innerText="Save"
+      const targetLi1=targetbyClick.previousElementSibling //targeting li 
+      const targetInput1= targetLi1.firstChild //targeting input inside li
+      targetInput1.removeAttribute("readonly")
+      targetInput1.focus()
+    }else{
+      const targetLi2=targetbyClick.previousElementSibling //targeting li 
+      const targetInput2= targetLi2.firstChild //targeting input inside li
+      targetbyClick.innerText="Edit"
+      targetInput2.setAttribute("readonly","readonly")
+    }
+    
   }
+  
 }
-
 
 //filter todo list
 function filter_todo(event) {
@@ -99,3 +130,5 @@ function filter_todo(event) {
       break
   }
 }
+
+
