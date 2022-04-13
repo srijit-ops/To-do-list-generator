@@ -21,6 +21,7 @@ h1{
     background: transparent;
     border: none;
 }
+
 .add_part{
     display: flex;
     justify-content: space-evenly;
@@ -44,6 +45,10 @@ h1{
     color: #FFC300;
     margin-left: 15px;
     cursor: pointer;
+    transition: all 0.2s;
+}
+.task_add h2:hover{
+    color: palegreen;
 }
 .task_heading{
     font-size: 33px;
@@ -81,6 +86,10 @@ h1{
     font-weight: 500;
     border: none;
     cursor: pointer;
+    transition: all 0.2s;
+}
+.checkButton:hover, .delButton:hover, .editButton:hover{
+    color: palegreen;
 }
 
 .liInputCSS{
@@ -106,7 +115,7 @@ h1{
 }
 .selection{
     margin: 25px;
-    padding: 13px;
+    padding: 13px 5px;
     border: none;
     border-radius: 4px;
     font-size: 16px;
@@ -210,6 +219,7 @@ h1{
     }
     .liInputCSS{
         width: 100px;
+        font-size: 15px;
     }
     .checkButton, .editButton, .delButton{
         font-size: 15px;

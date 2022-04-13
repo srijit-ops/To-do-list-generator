@@ -92,6 +92,7 @@ function doneDelEdit(event) {
       const targetInput2= targetLi2.firstChild //targeting input inside li
       targetbyClick.innerText="Edit"
       targetInput2.setAttribute("readonly","readonly")
+      
     }
     
   }
