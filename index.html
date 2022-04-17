@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,18 @@
     <title>To-do list generator</title>
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
     <h1>Task list</h1>
     <div class="add_part">
         <form>
             <input type="text" placeholder="Enter your task here" class="task_input">
+            <button class="task_add" type="submit">
+                <h2>Add Task</h2>
+            </button>
         </form>
-    
-        <button class="task_add" type="submit">
-            <h2>Add Task</h2>
-        </button>
+
+
     </div>
     <div class="selection_holder">
         <select class="selection">
@@ -30,4 +33,5 @@
     </ul>
     <script src="app.js" defer></script>
 </body>
+
 </html>

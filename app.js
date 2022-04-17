@@ -11,7 +11,7 @@ task_list[0].addEventListener("click", doneDelEdit)
 filterOption[0].addEventListener("click", filter_todo)
 
 //input adding function
-function addData(event) {
+function addData(event){
   //prevent form submitting
   event.preventDefault()
 
@@ -64,7 +64,7 @@ function addData(event) {
 
 function doneDelEdit(event) {
   const targetbyClick = event.target
-
+  console.log("ss")
   //delete item
   if (targetbyClick.classList[0] === "delButton") {
     const del_Div = targetbyClick.parentElement
